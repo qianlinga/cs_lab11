@@ -1,0 +1,95 @@
+<!DOCTYPE htmlplayl>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="hw4.css" rel="stylesheet">
+	<title></title>
+</head>
+<body>
+	<div class="hw4">
+<h2>Guessing Game</h2>
+<p>Your Guess(1 ~ 100)</p>
+<input type="text" id="guess" name="num1" size="25" maxlength="30">
+<br><br>
+<button class="play" id="play">play</button>
+<p class="result">Result<br>
+	<span id="a" >   </span></p>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+const guess = document.getElementById('guess');
+var answer =Math.floor(Math.random()*100+1);
+const button = document.getElementById('play');
+var left = 1;
+var right = 100;
+
+const guessnum = guess.value;
+var num = parseInt(guessnum);
+
+button.addEventListener("click",update);
+
+function update(){
+	const guess = document.getElementById('guess');
+	
+
+	
+	const guessnum = guess.value;
+	var num = parseInt(guessnum);
+		
+
+	if(num === answer){
+		alert("答對了!")
+	}else if(num>answer){
+		right = num;
+	//document.getElementById("a").innerHTML = left+"~"+right
+	
+		var ans1 = document.createElement('span');
+		var br = document.createElement("br");
+		
+		var text = document.createTextNode( left+"~"+right)
+		ans1.appendChild(text);
+		ans1.appendChild(br);
+		document.getElementById("a").appendChild(ans1);
+
+	
+	// document.getElementById("a").innerHTML = left+"~"+right
+
+	}else if(num<answer){
+		left = num;
+	//document.getElementById("a").innerHTML = left+"~"+right
+		var ans1 = document.createElement('span');
+		var br = document.createElement("br");
+		var text = document.createTextNode( left+"~"+right );
+		ans1.appendChild(text);
+		ans1.appendChild(br);
+		document.getElementById("a").appendChild(ans1);
+
+
+	}
+		
+
+	// var ans1 = document.createElement('span');
+	// 	ans1.id = "a";
+	// 	var text = document.createTextNode( left+"~"+right)
+	// 	ans1.appendChild(text);
+	
+
+
+}
+
+		
+ 
+
+
+
+
+</script>
+</body>
+</html>

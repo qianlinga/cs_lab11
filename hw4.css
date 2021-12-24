@@ -1,0 +1,31 @@
+.play{
+	border-bottom: 1px solid;
+	background-color: palevioletred;
+	width: 10%;
+	color: white;
+	height: 30px;
+
+}
+
+.play:hover{
+	background-color: red;
+}
+
+.hw4{
+	border-style: outset;
+	border-color: purple;
+	text-align: center;
+	background-color: skyblue;
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 25px;
+	
+}
+
+.result{
+	border-style: solid;
+	border-color: grey;
+	background-color:salmon;
+
+}
+
